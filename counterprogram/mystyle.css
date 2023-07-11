@@ -1,0 +1,49 @@
+
+#counter{
+    font-size: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btn1,#btn2,#btn3{
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    /* make it center */
+    display: inline-block;
+    position: relative;
+}
+#btn1{
+    background-color: #4CAF50;
+    color: white;
+    right: 10px;
+}
+#btn2{
+    background-color: #2196F3;
+    color: white;
+    left: 10px;
+}
+#btn3{
+    background-color: #f44336;
+    color: white;
+    left: 0px;
+}
+.button{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#btn1:hover{
+    background-color: #3e8e41;
+    color: #000;
+}
+#btn2:hover{
+    background-color: #0b7dda;
+    color: #000;
+}
+#btn3:hover{
+    background-color: #da190b;
+    color: #000;
+}
