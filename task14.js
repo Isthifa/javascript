@@ -82,3 +82,43 @@ const dog1 = new Dog("Tommy");
 dog1.eat();
 dog1.sleep();
 dog1.bark();
+
+//getter and setter in javascript is used to get and set the properties of an object.
+
+class Person{
+    constructor(name){
+        this.name = name;
+    }
+    get personName(){
+        return this.name;
+    }
+    set personName(name){
+        this.name = name;
+    }
+}
+const person1 = new Person("John");
+console.log(person1.personName);
+
+//array of objects in javascript is a collection of objects stored in a single variable.
+
+
+class Student1{
+    constructor(name, age, grade){
+        this.name = name;
+        this.age = age;
+        this.grade = grade;
+    }
+    getDetails(){
+        console.log(`Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`);
+    }
+}
+const student3 = new Student("John", 20, "A");
+const student4 = new Student("Smith", 21, "B");
+const student5 = new Student("Tom", 22, "C");
+const student6 = new Student("Jerry", 23, "D");
+const students = [student3, student4, student5, student6];
+for(let i=0; i<students.length; i++){
+    students[i].getDetails();
+}
+console.log(students[1].age);
+
