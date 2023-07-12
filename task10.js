@@ -23,3 +23,20 @@ console.log(students[0]);
 function print(element){
     console.log(element);
 }
+
+let numbers=[1,2,3,4,5,6,7,8,9,10];
+let odd=numbers.filter(isOdd);
+console.log(odd);
+function isOdd(element){
+    return element%2==1;
+}
+
+let number=[1,2,3,4,5,6,7,8,9,10];
+let square=number.map(squareOfNumber);
+square.forEach(print);
+function squareOfNumber(element){
+    return Math.pow(element,2);
+}
+function print(element){
+    console.log(element);
+}
