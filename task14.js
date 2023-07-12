@@ -55,3 +55,30 @@ const car3 = new car("Mercedes");
 console.log(car.numberofcars);
 
 car.getnumberofcars();
+
+
+// inheritance in javascript is a mechanism in which one object acquires all the properties and behaviors of the parent object.
+
+class Animal{
+    constructor(name){
+        this.name = name;
+    }
+    eat(){
+        console.log(`${this.name} is eating`);
+    }
+    sleep(){
+        console.log(`${this.name} is sleeping`);
+    }
+}
+class Dog extends Animal{
+    constructor(name){
+        super(name);
+    }
+    bark(){
+        console.log(`${this.name} is barking`);
+    }
+}
+const dog1 = new Dog("Tommy");
+dog1.eat();
+dog1.sleep();
+dog1.bark();
