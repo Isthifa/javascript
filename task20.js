@@ -78,27 +78,46 @@
 
 //using eventlistener detect keydown and keyup event move innerdiv 
 
-const innerdiv=document.getElementById("innerdiv");
-let x=0;
-let y=0;
-window.addEventListener("keydown",event=>{
-    switch(event.key){
-        case "ArrowUp":
-            y-=10;
-            innerdiv.style.top=y+"px";
-            break;
-        case "ArrowDown":
-            y+=10;
-            innerdiv.style.top=y+"px";
-            break;
-        case "ArrowLeft":
-            x-=10;
-            innerdiv.style.left=x+"px";
-            break;
-        case "ArrowRight":
-            x+=10;
-            innerdiv.style.left=x+"px";
-            break;
-    }
-});
+// const innerdiv=document.getElementById("innerdiv");
+// let x=0;
+// let y=0;
+// window.addEventListener("keydown",event=>{
+//     switch(event.key){
+//         case "ArrowUp":
+//             y-=10;
+//             innerdiv.style.top=y+"px";
+//             break;
+//         case "ArrowDown":
+//             y+=10;
+//             innerdiv.style.top=y+"px";
+//             break;
+//         case "ArrowLeft":
+//             x-=10;
+//             innerdiv.style.left=x+"px";
+//             break;
+//         case "ArrowRight":
+//             x+=10;
+//             innerdiv.style.left=x+"px";
+//             break;
+//     }
+// });
 
+//using eventlistener detect click and start animation
+
+const innerdiv=document.getElementById("innerdiv");
+const button=document.getElementById("toggle");
+button.addEventListener("click",()=>{
+    let timerId=null;
+    let x=0;
+    let y=0;
+    timerId=setInterval(()=>{
+        if(x>=400 && y>=400){
+            clearInterval(timerId);
+        }
+        else{
+            x+=1;
+            y+=1;
+            innerdiv.style.left=x+"px";
+            innerdiv.style.top=y+"px";
+        }
+    },5)});
